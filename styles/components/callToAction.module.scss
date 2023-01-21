@@ -11,7 +11,8 @@
   flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: center;
-
+  overflow: hidden;
+  
   @include media(">=tablet") {
     padding: 9rem 3rem;
   }

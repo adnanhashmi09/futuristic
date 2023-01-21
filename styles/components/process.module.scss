@@ -31,9 +31,9 @@
         gap: 16em;
         grid-template-columns: 1fr;
         margin-top: 9em;
-
+        margin-bottom: 20em;
         @include media(">=mindesk") {
-            gap: 16em 8em;
+            gap: 16em 10em;
             grid-template-columns: 1fr 1fr;
         }
         .item{
@@ -41,6 +41,11 @@
             position: relative;
             padding-inline: 2.2em;
             padding-block: 5em;
+            @include media(">=mindesk") {
+                max-width: 60em;
+                margin: auto;
+                padding-inline: 4em;
+            }
             h2{
                 font-size: 22rem;
                 position: absolute;
