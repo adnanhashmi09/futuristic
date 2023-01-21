@@ -10,14 +10,50 @@
 
   & .textContainer {
     position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  .textLine {
+    font-size: 80px;
+    font-weight: 600;
+
+    @include media(">=tablet") {
+      font-size: 120px;
+    }
+    @include media(">=mindesk") {
+      font-size: 180px;
+    }
   }
 
-  & h2 {
-    font-size: 6rem;
-    font-weight: 800;
+  .textLine text {
+    font-family: "ClashDisplay-Variable", "ClashDisplay-Extralight",
+      "ClashDisplay-Medium", "ClashDisplay-Semibold", "ClashDisplay-Bold",
+      sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 2px;
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-    @include media(">=mindesk") {
-      font-size: 16rem;
-    }
+  svg:nth-of-type(2) {
+    margin-top: -10px;
+    opacity: 0.6;
+  }
+
+  svg:nth-of-type(3) {
+    margin-top: -20px;
+    opacity: 0.4;
+  }
+  svg:nth-of-type(4) {
+    margin-top: -30px;
+    opacity: 0.2;
+  }
+  svg:nth-of-type(5) {
+    margin-top: -40px;
+    opacity: 0.1;
   }
 }
