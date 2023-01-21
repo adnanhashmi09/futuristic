@@ -10,8 +10,11 @@ function CallToAction(): JSX.Element {
         your
         <br /> needs
       </p>
-      <div className={styles.circle}>
-        <p>Start a project</p>
+      <div className={styles.right}>
+        <img src="/Vectorline.svg" alt="vector curved line" />
+        <div className={styles.circle}>
+          <p>Start a project</p>
+        </div>
       </div>
     </section>
   );
