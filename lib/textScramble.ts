@@ -13,7 +13,7 @@ class TextScramble {
   }
 
   setText(newText: string) {
-    const oldText = this.el.current.innerText;
+    const oldText = this.el.current.querySelectorAll("text")[0].innerHTML;
     const length = Math.max(oldText.length, newText.length);
     const promise = new Promise((resolve) => (this.resolve = resolve));
     this.queue = [];
@@ -49,6 +49,7 @@ class TextScramble {
       }
     }
     this.el.current.innerHTML = output;
+    [...this.el.current.querySelectorAll("text")];
     if (complete === this.queue.length) {
       this.resolve();
     } else {
