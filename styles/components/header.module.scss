@@ -1,0 +1,23 @@
+@use "../utils/variables" as *;
+@use "../utils/include-media" as *;
+@use "../utils/mixins" as *;
+
+.header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .textContainer {
+    position: relative;
+  }
+
+  & h2 {
+    font-size: 6rem;
+    font-weight: 800;
+
+    @include media(">=mindesk") {
+      font-size: 16rem;
+    }
+  }
+}
