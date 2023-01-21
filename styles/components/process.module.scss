@@ -1,0 +1,70 @@
+@use "../utils/variables" as *;
+@use "../utils/include-media" as *;
+@use "../utils/mixins" as *;
+
+.wrap{
+    padding-inline: 2em;
+
+    @include media(">=tablet") {
+        padding-inline: 3em;
+    }
+
+    @include media(">=mindesk") {
+        padding-inline: 8em;    
+    }
+
+    .divider{
+        height: 0.2em;
+        background-color: white;
+        opacity: 0.15;
+        width: 95%;
+        margin: auto;
+        margin-bottom: 20em;
+        visibility: hidden;
+        @include media(">=mindesk") {
+            visibility: visible;
+        }
+    }
+
+    .container{
+        display: grid;
+        gap: 16em;
+        grid-template-columns: 1fr;
+        margin-top: 9em;
+
+        @include media(">=mindesk") {
+            gap: 16em 8em;
+            grid-template-columns: 1fr 1fr;
+        }
+        .item{
+            border: 1px solid #404040;
+            position: relative;
+            padding-inline: 2.2em;
+            padding-block: 5em;
+            h2{
+                font-size: 22rem;
+                position: absolute;
+                right: -0.04em; 
+                top: -0.7em;
+                font-weight: 600;
+                opacity: 0.06;
+            }
+
+            h3{
+                font-size: 5rem;
+                font-weight: 500;
+                @include media(">=mindesk") {
+                    font-size: 6rem;
+                }
+            }
+
+            p{
+                font-size: 1.8rem;
+                font-weight: 400;
+                margin-top: 1em;
+                font-family: "Inter";
+                line-height: 1.9em;
+            }
+        }
+    }
+}

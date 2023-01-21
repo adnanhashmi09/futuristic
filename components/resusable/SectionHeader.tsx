@@ -4,7 +4,7 @@ function SectionHeader({ title , subList} : {title : string, subList : string[]}
     return (
         <section className={styles.section}>
             <div className={styles.left}>
-                <h2>{title}</h2>
+                <h2>{title.split(" ").join("\n")}</h2>
             </div>
             <div className={styles.right}>
                 <p>{subList.join(", ")}</p>

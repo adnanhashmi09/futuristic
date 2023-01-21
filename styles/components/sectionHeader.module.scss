@@ -3,23 +3,56 @@
 @use "../utils/mixins" as *;
 
 .section{
-    padding: 2em;
+    padding-inline: 2em;
     padding-top: 6em;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 3.5em;
+
+    @include media(">=tablet") {
+        padding-inline: 3em;
+      }
+
+    @include media(">=mindesk") {
+        flex-direction: row;
+        justify-content: space-between;  
+        padding-inline: 8em;    
+        padding-top: 12em;
+    }
+
     .left{
         h2{
-            font-size: 6rem;
+            font-size: 6.5rem;
             font-weight: 800;
             text-transform: uppercase;
+            white-space: pre;
+
+            @include media(">=mindesk") {
+                font-size: 11rem;
+            }
         }
+  
     }
     .right{
         p{
-            font-size: 2rem;
-            font-weight: 400;
+            font-size: 1.8rem;
+            font-weight: 700;
             text-transform: uppercase;
+            white-space: pre;
+            font-family: "Inter";
+        }
+
+        div{
+            background-color: white;
+            width: 100%;
+            margin-top: 1.1em;
+            height: 0.5em;
+        }
+
+        @include media(">=mindesk") {
+            width: 35%;
+            align-self: flex-end; 
+            margin-bottom: 4em;
         }
     }
 }

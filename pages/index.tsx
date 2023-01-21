@@ -5,6 +5,7 @@ import About from "@/components/About";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import SectionHeader from "@/components/resusable/SectionHeader";
+import Process from "@/components/Process";
 
 const meta = {
   title: "Futuristic",
@@ -17,7 +18,10 @@ export default function Home() {
       <Navbar />
       <Header />
       <About />
-      <SectionHeader title="Our Process" subList={["Work","Sports","Finance"]} />
+      <SectionHeader title="Our Process" subList={["Web3","Sports","Finance"]} />
+      <Process />
+      {/* <SectionHeader title="Selected Projects" subList={["Web3","Sports","Finance"]} /> */}
+
       <CallToAction />
       <Footer />
     </>
