@@ -20,6 +20,7 @@
   }
   .right {
     position: relative;
+    isolation: isolate;
   }
   img {
     position: absolute;
@@ -27,6 +28,7 @@
     transform: translate(-50%, -50%);
     height: 25rem;
     right: -15rem;
+    z-index: -1;
     @include media(">=tablet") {
       height: 40rem;
       right: -25rem;
@@ -63,26 +65,28 @@
     height: 6rem;
     width: 6rem;
     border-radius: 50%;
+    position: relative;
+    z-index: 1;
     @include media(">=tablet") {
       height: 9rem;
       width: 9rem;
     }
     @include media(">=mindesk") {
-      height: 11rem;
-      width: 11rem;
+      height: 14rem;
+      width: 14rem;
     }
     & p {
       font-family: "Inter";
       color: $clr-white;
-      font-size: 1rem;
+      font-size: 0.8rem;
       display: inline-block;
       text-align: center;
-      text-transform: none;
+      text-transform: uppercase;
       @include media(">=tablet") {
         font-size: 1.6rem;
       }
       @include media(">=mindesk") {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
     }
   }
