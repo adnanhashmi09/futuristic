@@ -42,9 +42,8 @@
 
   h1 {
     font-size: 1.5rem;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+    font-weight: 600;
+    letter-spacing: 2px;;
     transition: color 0.5s ease-in 0.5s;
 
     @include media(">=tablet") {

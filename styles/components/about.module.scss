@@ -10,14 +10,19 @@
   }
   @include media(">=mindesk") {
     padding: 0 12rem;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
   }
   p {
     display: block;
     color: $clr-white;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 500;
     @include media(">=tablet") {
-      font-size: 3.8rem;
+      font-size: 5rem;
     }
     @include media(">=mindesk") {
       font-size: 7rem;
