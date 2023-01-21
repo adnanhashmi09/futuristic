@@ -30,7 +30,7 @@ function Header(): JSX.Element {
     let counter = 0;
     const next = () => {
       fx.setText(phrases[counter]).then(() => {
-        setTimeout(next, 1800);
+        setTimeout(next, 2800);
       });
       counter = (counter + 1) % phrases.length;
     };
