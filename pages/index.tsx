@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import About from "@/components/About";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
+import SectionHeader from "@/components/resusable/SectionHeader";
 
 const meta = {
   title: "Futuristic",
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <Header />
       <About />
+      <SectionHeader title="Our Process" subList={["Work","Sports","Finance"]} />
       <CallToAction />
       <Footer />
     </>

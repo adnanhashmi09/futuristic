@@ -1,0 +1,25 @@
+@use "../utils/variables" as *;
+@use "../utils/include-media" as *;
+@use "../utils/mixins" as *;
+
+.section{
+    padding: 2em;
+    padding-top: 6em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    .left{
+        h2{
+            font-size: 6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+    }
+    .right{
+        p{
+            font-size: 2rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+}
