@@ -5,7 +5,7 @@ function CallToAction(): JSX.Element {
       <p>
         <span>
           We’re here to <br />
-          meet &nbsp;
+          meet{" "}
         </span>
         your
         <br /> needs
