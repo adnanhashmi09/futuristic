@@ -10,25 +10,36 @@ function Header(): JSX.Element {
   const tempref = useRef(null);
   useEffect(() => {
     if (tempref.current === null) return;
-    console.log(tempref.current.querySelectorAll("text"));
+    console.log(
+      Array.from((tempref.current as HTMLElement).querySelectorAll("text"))
+    );
   }, [tempref.current]);
 
-  /* useEffect(() => { */
-  /*   const fx = new TextScramble(ref); */
-  /**/
-  /*   let counter = 0; */
-  /*   const next = () => { */
-  /*     fx.setText(phrases[counter]).then(() => { */
-  /*       setTimeout(next, 1800); */
-  /*     }); */
-  /*     counter = (counter + 1) % phrases.length; */
-  /*   }; */
-  /**/
-  /*   next(); */
-  /* }, []); */
+  useEffect(() => {
+    if (ref.current === null || ref.current === undefined) return;
+    console.log(ref.current);
+    const nodeArray = Array.from(
+      (ref.current as HTMLElement).querySelectorAll("text")
+    );
+
+    console.log(nodeArray[0].innerHTML.toString());
+    /* return; */
+
+    const fx = new TextScramble(ref, nodeArray);
+
+    let counter = 0;
+    const next = () => {
+      fx.setText(phrases[counter]).then(() => {
+        setTimeout(next, 1800);
+      });
+      counter = (counter + 1) % phrases.length;
+    };
+
+    next();
+  }, [ref.current]);
   return (
     <header className={styles.header}>
-      <div ref={tempref} className={styles.textContainer}>
+      <div ref={ref} className={styles.textContainer}>
         <svg
           height="200"
           stroke="#fff"

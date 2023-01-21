@@ -5,23 +5,25 @@ class TextScramble {
   frame: any;
   resolve: any;
   frameRequest: any;
+  nodeArray: any;
 
-  constructor(el: any) {
+  constructor(el: any, nodeArray: any) {
     this.el = el;
+    this.nodeArray = nodeArray;
     this.chars = "!<>-_\\/[]{}—=+*^?#________";
     this.update = this.update.bind(this);
   }
 
   setText(newText: string) {
-    const oldText = this.el.current.querySelectorAll("text")[0].innerHTML;
+    const oldText = (this.nodeArray[0] as HTMLElement).innerHTML.toString();
     const length = Math.max(oldText.length, newText.length);
     const promise = new Promise((resolve) => (this.resolve = resolve));
     this.queue = [];
     for (let i = 0; i < length; i++) {
       const from = oldText[i] || "";
       const to = newText[i] || "";
-      const start = Math.floor(Math.random() * 35);
-      const end = start + Math.floor(Math.random() * 35);
+      const start = Math.floor(Math.random() * 40);
+      const end = start + Math.floor(Math.random() * 40);
       this.queue.push({ from, to, start, end });
     }
     cancelAnimationFrame(this.frameRequest);
@@ -43,13 +45,20 @@ class TextScramble {
           char = this.randomChar();
           this.queue[i].char = char;
         }
-        output += `<span class="dud">${char}</span>`;
+        output += `${char}`;
       } else {
         output += from;
       }
     }
-    this.el.current.innerHTML = output;
-    [...this.el.current.querySelectorAll("text")];
+    /* this.el.current.innerHTML = output; */
+    /* [...this.el.current.querySelectorAll("text")].forEach((txt) => { */
+    /*   txt.innerHTML = output; */
+    /* }); */
+
+    this.nodeArray.forEach((txt: any) => {
+      txt.innerHTML = output;
+    });
+
     if (complete === this.queue.length) {
       this.resolve();
     } else {
