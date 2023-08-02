@@ -4,16 +4,13 @@ import Link from "next/link";
 function Footer(): JSX.Element {
   return (
     <footer className={styles.footer}>
-      <h2>Futuristic </h2>
+      <h2>the Blox studio </h2>
       <ul>
         <li>
-          <Link href=""> Work</Link>
+          <Link href="/#about"> About</Link>
         </li>
         <li>
-          <Link href="">Our Process</Link>
-        </li>
-        <li>
-          <Link href=""> Contact </Link>
+          <Link href="/#ourprocess">Our Process</Link>
         </li>
       </ul>
     </footer>

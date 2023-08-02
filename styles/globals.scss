@@ -16,6 +16,7 @@ html {
   font-size: 62.5%;
   overflow-y: scroll;
   overflow-x: hidden;
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
   text-rendering: optimizeLegibility;
   color: $clr-white;
   background-color: $clr-black;
+  scroll-behavior: smooth !important;
 }
 
 /* width */

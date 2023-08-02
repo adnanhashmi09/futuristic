@@ -7,6 +7,63 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+  & .blurrybg{
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 40rem;
+    width:40rem;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-radius: 50% 22% 40% 80%;  
+    filter: blur(100px);
+    background: radial-gradient(circle at 50% 50%,hsla(20,50%,50%,1), transparent);
+    opacity: 0.3;   
+
+    @include media('>=tablet'){
+      height: 60rem;
+      width: 60rem;
+      top: 30%;
+      left: 50%;
+    }
+
+    @include media('>=mindesk'){
+      height: 80rem;
+      width: 80rem;
+      top: 10%;
+      left: 50%;
+    }
+  }
+
+  & .blurrybg1{
+    position: absolute;
+    height: 40rem;
+    width: 40rem;
+    top: -10%;
+    left: 70%;
+    transform: translate(-50%, 0%);
+    border-radius: 50% 22% 40% 80%;  
+    filter: blur(100px);
+    background: radial-gradient(circle at 50% 50%,rgba(76, 0, 255, 1), rgba(76, 0, 255, 0));
+    opacity: 0.2;   
+
+    @include media('>=tablet'){
+      height: 60rem;
+      width: 60rem;
+      top: -10%;
+      left: 70%;
+    }
+
+    @include media('>=mindesk'){
+      height: 80rem;
+      width: 80rem;
+      top: -30%;
+      left: 70%;
+    }
+  }
 
   & .textContainer {
     position: relative;

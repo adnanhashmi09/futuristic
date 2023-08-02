@@ -1,7 +1,7 @@
 import styles from "@/styles/components/callToAction.module.scss";
 function CallToAction(): JSX.Element {
   return (
-    <section className={styles.cta}>
+    <section id="work" className={styles.cta}>
       <p>
         <span>
           We’re here to <br />

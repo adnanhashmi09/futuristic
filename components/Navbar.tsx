@@ -17,7 +17,9 @@ function Navbar(): JSX.Element {
           clicked ? `${styles.overlay} ${styles.clicked}` : styles.overlay
         }
       />
-      <h1 className={clicked ? `${styles.clicked}` : ""}>Futuristic</h1>
+      <h1 className={clicked ? `${styles.clicked}` : ""}>
+        the<span>BLOX</span>studio
+      </h1>
       <div
         className={clicked ? `${styles.menu} ${styles.clicked}` : styles.menu}
         onClick={() => {
@@ -34,15 +36,15 @@ function Navbar(): JSX.Element {
       >
         <li>
           <h2>01</h2>
-          <Link href="#">Work</Link>
+          <Link href="#about">About</Link>
         </li>
         <li>
           <h2>02</h2>
-          <Link href="#">Our Process</Link>
+          <Link href="/#ourprocess">Our Process</Link>
         </li>
         <li>
           <h2>03</h2>
-          <Link href="#">Contact</Link>
+          <Link href="/#work">Work</Link>
         </li>
       </ul>
     </nav>
