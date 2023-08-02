@@ -39,8 +39,8 @@ function Header(): JSX.Element {
   }, [ref.current]);
   return (
     <header className={styles.header}>
-      <div className={styles.blurrybg} />
-      <div className={styles.blurrybg1} />
+      {/* <div className={styles.blurrybg} /> */}
+      {/* <div className={styles.blurrybg1} /> */}
       <div ref={ref} className={styles.textContainer}>
         <svg
           height="200"
